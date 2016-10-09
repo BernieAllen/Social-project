@@ -1,0 +1,821 @@
+@font-face {
+    font-family: 'open_sanslight';
+    src: url(../fonts/opensans_light/OpenSans-Light-webfont.eot);
+    src: url(../fonts/opensans_light/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/opensans_light/OpenSans-Light-webfont.woff) format("woff"), url(../fonts/opensans_light/OpenSans-Light-webfont.ttf) format("truetype"), url(../fonts/opensans_light/OpenSans-Light-webfont.svg#open_sanslight) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+$page_container_width: 85%;
+$myBoxShadow: 2px 2px 2px gray;
+$special_gray: #efefef;
+html, body {
+    min-height: 100%;
+    margin-bottom: 1px;
+    overflow: -moz-scrollbars-vertical;
+}
+
+* {
+    margin:0;
+    padding:0;
+  }
+
+
+
+	button {
+        background-color: #286090;
+        border-radius: 5px;
+        border: 0px #286090;
+        height: 30px;
+        padding: 5px;
+        width: 90px;
+        cursor: pointer;
+        color: white;
+        margin-left: 10px;
+    }
+
+.form-control {
+    display: block;
+    width: 100%;
+    //height: 34px;
+   // padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+ol, ul {
+    margin: 0px;
+    padding-left: 0px;
+}
+.appContainer {
+    min-height: 600px;
+    font-family: 'open_sanslight';
+    color: black;
+    font-weight: 500;
+}
+.headerBar {
+    background-color: black;
+    box-shadow: $myBoxShadow;
+    max-height: 200px;
+    z-index: 10;
+    .nav-logo > img {
+        width: 55px;
+        float: left;
+    }
+    .headerNav_left li {
+        float: left;
+        font-size: 16px;
+        margin-right: 8px;
+        margin-left: 30px;
+        list-style: none;
+    }
+    .headerbar_loggedin_ui {
+        margin-top: 0px;
+        float: right;
+        min-height: 50px;
+        width: 55px;
+        padding: 0px;
+        img {
+            width: 50px;
+        }
+    }
+
+    .headerNav_right {
+        float: right;
+        list-style: none;
+        min-height: 40px;
+        width: 400px;
+        position: relative;
+
+        .loginRegisterButtons_wrap {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            width: 245px;
+            height: 50px;
+             .loginRegisterButton {        
+                background-color: transparent;
+                border-radius: 5px;
+                border: 1px solid white;
+                height: 45px;
+                padding: 10px;
+                width: 100px;
+                cursor: pointer;
+                color: white;
+                margin-left: 10px;
+                margin-right: 10px;
+
+                a {
+                    color: white;         
+                }
+
+                 &:hover {
+                    border: 2px solid #286090;
+                    opacity: .8;
+                } 
+
+                &:focus {
+                   outline: none; 
+                   border: 2px solid #286090; 
+                } 
+            }
+        
+        }
+
+        .user_settings_dropdown {
+            cursor: pointer;
+            img {
+                height: 38px;
+                padding: 2px;
+                width: 38px;
+                border-radius: 5px;
+            }
+        }
+
+        .headerBarSearch_wrap {
+            margin-top: 4px;
+            width: 235px;
+            float: right;
+            margin-right: 30px;
+            input {
+                width: 200px;
+                height: 30px;
+                border-radius: 5px 0px 0px 5px;
+                border: none;
+            }
+
+            input-placeholder {
+                padding: 40px;
+            }
+
+            .searchIconWrap{
+                margin-right: 0px;
+                background-color: white;
+                color: black;
+                border-radius: 0px 5px 5px 0px;
+                width: 35px;
+                border-left: 1px solid gray;
+                height: 30px;
+                cursor: pointer;
+                float: right;
+                img {
+                    margin-left: 25%;
+                    margin-top: 20%;
+                }
+            }
+        }
+    }    
+}
+.homeContainer {
+    margin: 0 auto;
+    width: $page_container_width;
+    margin-top: 20px;
+    // Column count
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    -ms-column-count: 3;
+    column-count: 3;
+    // Avoid Break
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    column-break-inside: avoid;
+    //Column gap
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    -ms-column-gap: 5px;
+    column-gap: 5px;
+    .myItems {
+        display: inline-block;
+        min-height: initial;
+        border: 1px solid $special_gray;
+        -moz-column-width: 330px;
+        -webkit-column-width: 330px;
+        column-width: 330px;
+        margin: 3px;
+        padding: 15px;
+        box-shadow: $myBoxShadow;
+        border-radius: 5px 5px 5px 5px;
+        .myItem_header {
+            border-bottom: 1px solid $special_gray;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+.pageContainer {
+    margin: 0 auto;
+    width: $page_container_width;
+    margin-top: 30px;
+    padding-bottom: 7px;
+}
+.display_user_info_wrap {
+    width: 250px;
+    min-height: 225px;
+    margin: 0px;
+    float: left;
+    .display_user_info {
+        margin-left: 10px;
+        border: 1px solid $special_gray;
+        width: 230px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: $myBoxShadow;
+        margin-bottom: 7px;
+
+        .display_user_avatar {
+            width: 100%;
+        }
+        .display_user_content {
+            width: 230px;
+            textarea {
+                margin-top: 10px;
+                width: 210px;
+            }
+            .status1_before {
+                opacity: 0;
+            }
+            .status1_after {
+                opacity: 1;
+            }
+        }
+
+        .profile_notifications {
+            font-size: 13px;
+            img {
+                margin-bottom: 7px;
+                width: 18px;
+                margin-right: 10px;
+            } 
+        }
+        input {
+            width: 210px;
+            margin-top: 10px;
+        }
+    }
+
+    .display_user_name {
+        font-size: 16px;
+        margin-bottom: 7px;
+    }
+
+    .display_user_about {
+       font-size: 13px;
+    }
+}
+
+
+.profilepage_user_posts_section {
+    width: 625px;
+    margin-left: 300px;
+    .user_stats {
+        float: left;
+        padding-left: 0px;
+        width: 615px;
+        ul li {
+            list-style: none;
+            display: inline;
+            margin-right: 60px;
+            font-weight: bold;
+            font-size: 1em;
+            padding-left: 0px;
+            cursor: pointer;
+        }
+        .follow_user_button {
+            background-color: #286090;
+            border-radius: 5px;
+            border: 0px #286090;
+            height: 30px;
+            padding: 5px;
+            width: 90px;
+            cursor: pointer;
+            color: white;
+            float: right;
+        }
+        .unfollow_user_button {
+            background-color: green;
+            border-radius: 5px;
+            border: 0px #286090;
+            height: 30px;
+            padding: 5px;
+            width: 90px;
+            cursor: pointer;
+            color: white;
+            float: right;
+        }
+        .profile_nav_underline {
+            border-bottom: 3px solid $special_gray;
+        }
+    }
+    .profile_user_content {
+        width: 625px;
+        margin-top: 30px;
+        // Column count
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        -ms-column-count: 3;
+        column-count: 3;
+        // Avoid Break
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        -ms-column-break-inside: avoid;
+        column-break-inside: avoid;
+        //Column gap
+        -webkit-column-gap: 5px;
+        -moz-column-gap: 5px;
+        -ms-column-gap: 5px;
+        column-gap: 5px;
+        .user_post_wrap {
+            display: inline-block;
+            border: 1px solid $special_gray;
+            border-radius: 5px;
+            width: 185px;
+            box-shadow: 1px 1px 3px gray;
+            margin-bottom: 10px;
+            margin-right: 5px;
+            -moz-column-width: 185px;
+            -webkit-column-width: 185px;
+            column-width: 185px;
+            padding: 5px;
+            cursor: pointer;
+            .user_post_header_container {
+                font-size: 13px;
+                white-space: nowrap;
+                width: 173px;
+                overflow: hidden;
+                float: left;
+                text-overflow: ellipsis;
+                //border-bottom: 1px solid #f4f4f4;
+                margin-bottom: 5px;
+                padding: 5px;
+            }
+            .user_post_image_container {
+                width: 173px;
+                img {
+                    width: 173px;
+                }
+            }
+        }
+        .profile_not_something {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+.newsFeedAndPostWrap {
+    width: 575px;
+    float: left;
+    margin-left: 30px;
+
+    .createpost_wrap {
+        width: 575px;
+        border: 1px solid $special_gray;
+        border-radius: 5px;
+        padding-bottom: 0px;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 15px;
+        float: left;
+        //background-color: #cee8ff;
+        .createpost_textarea_close {
+            width: 100%;
+            max-height: 50px;
+            border-radius: 5px;
+        }
+        .createpost_textarea_open {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 5px;
+            max-height: 100px;
+            height: 100px;
+        }
+        .createPostCategory_hide {
+            display: none;
+        }
+        .createPostCategory_show {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .createPostButton_hide {
+            display: none;
+        }
+        .createPostButton_show {
+            display: inherit;
+            margin-bottom: 10px;
+            border: 1px solid $special_gray;
+            float: right;
+            clear: both;
+        }
+        .uploadPicButton_hide {
+            display: none;
+        }
+        .uploadPicButton_show {
+            display: inherit;
+            float: left;
+            cursor: pointer;
+            img {
+                cursor: pointer;
+            }
+        }
+        
+        .upLoadLinkIcon_hide {
+            display: none;
+        }
+
+        .picNotSelected {
+            img{
+                width: 30px;
+            }   
+        }
+
+        .picSelected {
+            img{
+                width: 90px;
+                border-radius: 3px;
+                box-shadow: 2px 2px 2px gray;
+            }       
+        }
+
+        .upLoadLinkIcon_show {
+            cursor: pointer;
+            margin-left: 10px;
+            line-height: 0px;
+            img {
+               margin-top: 3px;
+               width: 21px; 
+            }
+        }
+
+    }
+
+    .newsfeed_wrap {
+    float: left;
+    width: 575px;
+    margin-top: 3px;
+        .newsfeed_item_wrap {
+            z-index: 1;
+        border: 1px solid $special_gray;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+            .their_avatar {
+                width: 50px;
+                border-radius: 5px;
+            }
+            .poster_profilepic {
+                float: left;
+            }
+            .post_content_wrap {
+                width: 475px;
+                margin-left: 12%;
+                .postWrap_text {
+                    .poster_posttext {
+                        margin-bottom: 10px;
+                        margin-top: 3px;
+                        float: left;
+                    }
+                    .poster_name {
+                        float: left;
+                        font-weight: bolder;
+                    }
+                }
+                .post_image {
+                    width: 100%;
+                    margin-right: 10px;
+                }
+                .post_image img {
+                    border-radius: 5px;
+                    width: 100%;
+                    box-shadow: 1px 1px 1px gray;
+                }
+
+                
+                .newsfeedicon {
+                    margin-top: 15px;
+                    cursor: pointer;
+                    float: left;
+                    margin-right: 35px;
+                    margin-bottom: 10px;
+                }
+                .likeThis {
+                    img {
+                        width: 17px;
+                    }
+                }
+
+                .repostThis {
+                    img {
+                        width: 15px;
+                    }
+                }
+
+                .moreOptions {
+                    img {
+                        width: 24px;
+                    }
+                }
+
+                .commentOptions{
+                    img {
+                        width: 19px
+                    }
+                }
+            }
+        }
+
+        .postDateTime {
+            font-size: 11px;
+        }
+    }
+
+}
+
+.loginRegister_wrap {
+  width: 225px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid $special_gray;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px $special_gray;
+  padding: 15px;
+    input {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    button {
+        background-color: #286090;
+        border-radius: 5px;
+        border: 0px #286090;
+        height: 30px;
+        padding: 5px;
+        width: 90px;
+        cursor: pointer;
+        color: white;
+        margin-top: 20px;
+    }  
+}
+
+.registeration_form {
+    width: 225px;
+    margin: 0 auto;
+    input {
+        margin-top: 5px;
+        width: 100%;
+    }
+    button {
+        margin-top: 5px;
+        border: none;
+    }
+}
+.avatar_wrap {
+    img {
+        width: 250px;
+    }
+}
+.clear {
+    line-height: 0;
+    clear: both;
+}
+.hideElement {
+    display: none;
+}
+._click {
+    padding-bottom: 5px;
+}
+.favorite_button {
+    cursor: pointer;
+}
+
+ .toggle_dropDown {
+        z-index: 9999;
+        margin-top: 55px;
+        right: 20px;
+        clear: both;
+        width: 150px;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: white;
+        position: absolute;
+        border-radius: 5px;
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+    }
+    .hide {
+        display: none;
+    }
+.newsfeed_dropdown {
+        z-index: 9999;
+        width: 150px;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: white;
+        position: absolute;
+        border-radius: 5px;
+        ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+}
+
+.dialogBoxWrap {
+
+    .dialogoverlay {
+        opacity: .1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black;
+        width: 100%;
+        height: 100%;
+        z-index: 1
+    }
+    .dialogbox {
+        position: fixed;
+        background: #fff;
+        border: 1px solid black;
+        border-radius: 7px;
+        width: 400px;
+        z-index: 10;
+        //height: 200px;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        margin-top: -125px;
+        margin-left: -150px;
+    }
+
+}
+
+.dialogBoxWrapMessage {
+
+.dialogoverlay {
+    opacity: .6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+.dialogbox {
+    position: fixed;
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 50%;
+    z-index: 10;
+    text-align: center;
+    top: 40%;
+    left: 40%;
+    margin-top: -125px;
+    margin-left: -150px;
+
+    .message_input_and_butt {
+        position: relative;
+
+         button {
+            height: 32px;
+            position: absolute;
+            left: 70px;
+        }
+
+        .messageTitle {
+            width: 250px;
+            border-radius: 5px;
+            margin-left: 25px;
+            height: 30px;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        textarea {
+            padding: 5px;
+            min-height: 175px;
+            max-height: 175px;
+            border-radius: 5px;
+            max-width: 80%;
+            min-width: 80%;
+            margin-left: 80px;
+            margin-right: 0px;
+            border: 1px solid gray;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .dialogAvatar {
+        width: 45px;
+        height: 45px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 20px;
+        img {
+            width: 45px;
+            border-radius: 5px;
+        }
+    }
+
+    .dialogboxbody_hide {
+        display: none;
+    }
+
+    .closeDialog {
+        float: left;
+        margin-right: 11px;
+        color: gray;
+        font-weight: bolder;
+        cursor: pointer;
+        float: right;
+    } 
+
+}
+
+}
+
+
+.inboxWrap {
+    .inboxNavWrap {
+        width: 550px;
+         div {
+            float: left;
+            margin-right: 80px;
+            color: blue;
+            cursor: pointer;
+         }
+
+        .inboxOptions_inactive {
+            cursor: default;
+            opacity: .4;
+        }
+
+        .inboxOptions {
+            cursor: pointer;
+            opacity: inherit;
+            font-weight: bold;
+        }
+    }
+
+    .inboxBody {
+        width: 75%;
+        margin-top: 10px;
+
+        
+        
+            .messagePanel_wrap {
+                position: relative;
+                margin-bottom: 5px;
+                border: 1px solid $special_gray;
+                border-radius: 5px;
+                padding: 10px;
+                cursor: pointer;
+
+                :hover {
+                    background-color: purple;
+                }
+
+                .messagePanel_avatar {
+                float: left;
+                    img {
+                        width: 45px;
+                        border-radius: 5px;
+                    }
+                }
+
+            .messageDetail_wrap {
+                float: left;
+                position: relative;
+                left: 15px;
+                .messagePanel_messageTitle {
+                    
+                }
+
+                .messagePanel_from {
+
+                }
+            }
+
+            .checkBox {
+                float: right;
+            }
+        }
+
+    }
+}
+
+
+

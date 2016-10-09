@@ -1,0 +1,610 @@
+@font-face {
+  font-family: 'open_sanslight';
+  src: url(../fonts/opensans_light/OpenSans-Light-webfont.eot);
+  src: url(../fonts/opensans_light/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/opensans_light/OpenSans-Light-webfont.woff) format("woff"), url(../fonts/opensans_light/OpenSans-Light-webfont.ttf) format("truetype"), url(../fonts/opensans_light/OpenSans-Light-webfont.svg#open_sanslight) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+html, body {
+  min-height: 100%;
+  margin-bottom: 1px;
+  overflow: -moz-scrollbars-vertical; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+button {
+  background-color: #286090;
+  border-radius: 5px;
+  border: 0px #286090;
+  height: 30px;
+  padding: 5px;
+  width: 90px;
+  cursor: pointer;
+  color: white;
+  margin-left: 10px; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+ol, ul {
+  margin: 0px;
+  padding-left: 0px; }
+
+.appContainer {
+  min-height: 600px;
+  font-family: 'open_sanslight';
+  color: black;
+  font-weight: 500; }
+
+.headerBar {
+  background-color: black;
+  box-shadow: 2px 2px 2px gray;
+  max-height: 200px;
+  z-index: 10; }
+  .headerBar .nav-logo > img {
+    width: 55px;
+    float: left; }
+  .headerBar .headerNav_left li {
+    float: left;
+    font-size: 16px;
+    margin-right: 8px;
+    margin-left: 30px;
+    list-style: none; }
+  .headerBar .headerbar_loggedin_ui {
+    margin-top: 0px;
+    float: right;
+    min-height: 50px;
+    width: 55px;
+    padding: 0px; }
+    .headerBar .headerbar_loggedin_ui img {
+      width: 50px; }
+  .headerBar .headerNav_right {
+    float: right;
+    list-style: none;
+    min-height: 40px;
+    width: 400px;
+    position: relative; }
+    .headerBar .headerNav_right .loginRegisterButtons_wrap {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      width: 245px;
+      height: 50px; }
+      .headerBar .headerNav_right .loginRegisterButtons_wrap .loginRegisterButton {
+        background-color: transparent;
+        border-radius: 5px;
+        border: 1px solid white;
+        height: 45px;
+        padding: 10px;
+        width: 100px;
+        cursor: pointer;
+        color: white;
+        margin-left: 10px;
+        margin-right: 10px; }
+        .headerBar .headerNav_right .loginRegisterButtons_wrap .loginRegisterButton a {
+          color: white; }
+        .headerBar .headerNav_right .loginRegisterButtons_wrap .loginRegisterButton:hover {
+          border: 2px solid #286090;
+          opacity: .8; }
+        .headerBar .headerNav_right .loginRegisterButtons_wrap .loginRegisterButton:focus {
+          outline: none;
+          border: 2px solid #286090; }
+    .headerBar .headerNav_right .user_settings_dropdown {
+      cursor: pointer; }
+      .headerBar .headerNav_right .user_settings_dropdown img {
+        height: 38px;
+        padding: 2px;
+        width: 38px;
+        border-radius: 5px; }
+    .headerBar .headerNav_right .headerBarSearch_wrap {
+      margin-top: 4px;
+      width: 235px;
+      float: right;
+      margin-right: 30px; }
+      .headerBar .headerNav_right .headerBarSearch_wrap input {
+        width: 200px;
+        height: 30px;
+        border-radius: 5px 0px 0px 5px;
+        border: none; }
+      .headerBar .headerNav_right .headerBarSearch_wrap input-placeholder {
+        padding: 40px; }
+      .headerBar .headerNav_right .headerBarSearch_wrap .searchIconWrap {
+        margin-right: 0px;
+        background-color: white;
+        color: black;
+        border-radius: 0px 5px 5px 0px;
+        width: 35px;
+        border-left: 1px solid gray;
+        height: 30px;
+        cursor: pointer;
+        float: right; }
+        .headerBar .headerNav_right .headerBarSearch_wrap .searchIconWrap img {
+          margin-left: 25%;
+          margin-top: 20%; }
+
+.homeContainer {
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 20px;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  -ms-column-count: 3;
+  column-count: 3;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  -ms-column-break-inside: avoid;
+  column-break-inside: avoid;
+  -webkit-column-gap: 5px;
+  -moz-column-gap: 5px;
+  -ms-column-gap: 5px;
+  column-gap: 5px; }
+  .homeContainer .myItems {
+    display: inline-block;
+    min-height: initial;
+    border: 1px solid #efefef;
+    -moz-column-width: 330px;
+    -webkit-column-width: 330px;
+    column-width: 330px;
+    margin: 3px;
+    padding: 15px;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 5px 5px 5px 5px; }
+    .homeContainer .myItems .myItem_header {
+      border-bottom: 1px solid #efefef;
+      margin-bottom: 15px;
+      padding: 10px; }
+    .homeContainer .myItems img {
+      width: 100%; }
+
+.pageContainer {
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 30px;
+  padding-bottom: 7px; }
+
+.display_user_info_wrap {
+  width: 250px;
+  min-height: 225px;
+  margin: 0px;
+  float: left; }
+  .display_user_info_wrap .display_user_info {
+    margin-left: 10px;
+    border: 1px solid #efefef;
+    width: 230px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px gray;
+    margin-bottom: 7px; }
+    .display_user_info_wrap .display_user_info .display_user_avatar {
+      width: 100%; }
+    .display_user_info_wrap .display_user_info .display_user_content {
+      width: 230px; }
+      .display_user_info_wrap .display_user_info .display_user_content textarea {
+        margin-top: 10px;
+        width: 210px; }
+      .display_user_info_wrap .display_user_info .display_user_content .status1_before {
+        opacity: 0; }
+      .display_user_info_wrap .display_user_info .display_user_content .status1_after {
+        opacity: 1; }
+    .display_user_info_wrap .display_user_info .profile_notifications {
+      font-size: 13px; }
+      .display_user_info_wrap .display_user_info .profile_notifications img {
+        margin-bottom: 7px;
+        width: 18px;
+        margin-right: 10px; }
+    .display_user_info_wrap .display_user_info input {
+      width: 210px;
+      margin-top: 10px; }
+  .display_user_info_wrap .display_user_name {
+    font-size: 16px;
+    margin-bottom: 7px; }
+  .display_user_info_wrap .display_user_about {
+    font-size: 13px; }
+
+.profilepage_user_posts_section {
+  width: 625px;
+  margin-left: 300px; }
+  .profilepage_user_posts_section .user_stats {
+    float: left;
+    padding-left: 0px;
+    width: 615px; }
+    .profilepage_user_posts_section .user_stats ul li {
+      list-style: none;
+      display: inline;
+      margin-right: 60px;
+      font-weight: bold;
+      font-size: 1em;
+      padding-left: 0px;
+      cursor: pointer; }
+    .profilepage_user_posts_section .user_stats .follow_user_button {
+      background-color: #286090;
+      border-radius: 5px;
+      border: 0px #286090;
+      height: 30px;
+      padding: 5px;
+      width: 90px;
+      cursor: pointer;
+      color: white;
+      float: right; }
+    .profilepage_user_posts_section .user_stats .unfollow_user_button {
+      background-color: green;
+      border-radius: 5px;
+      border: 0px #286090;
+      height: 30px;
+      padding: 5px;
+      width: 90px;
+      cursor: pointer;
+      color: white;
+      float: right; }
+    .profilepage_user_posts_section .user_stats .profile_nav_underline {
+      border-bottom: 3px solid #efefef; }
+  .profilepage_user_posts_section .profile_user_content {
+    width: 625px;
+    margin-top: 30px;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    -ms-column-count: 3;
+    column-count: 3;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    -ms-column-break-inside: avoid;
+    column-break-inside: avoid;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    -ms-column-gap: 5px;
+    column-gap: 5px; }
+    .profilepage_user_posts_section .profile_user_content .user_post_wrap {
+      display: inline-block;
+      border: 1px solid #efefef;
+      border-radius: 5px;
+      width: 185px;
+      box-shadow: 1px 1px 3px gray;
+      margin-bottom: 10px;
+      margin-right: 5px;
+      -moz-column-width: 185px;
+      -webkit-column-width: 185px;
+      column-width: 185px;
+      padding: 5px;
+      cursor: pointer; }
+      .profilepage_user_posts_section .profile_user_content .user_post_wrap .user_post_header_container {
+        font-size: 13px;
+        white-space: nowrap;
+        width: 173px;
+        overflow: hidden;
+        float: left;
+        text-overflow: ellipsis;
+        margin-bottom: 5px;
+        padding: 5px; }
+      .profilepage_user_posts_section .profile_user_content .user_post_wrap .user_post_image_container {
+        width: 173px; }
+        .profilepage_user_posts_section .profile_user_content .user_post_wrap .user_post_image_container img {
+          width: 173px; }
+    .profilepage_user_posts_section .profile_user_content .profile_not_something {
+      margin: 0 auto; }
+
+.newsFeedAndPostWrap {
+  width: 575px;
+  float: left;
+  margin-left: 30px; }
+  .newsFeedAndPostWrap .createpost_wrap {
+    width: 575px;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding-bottom: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    float: left; }
+    .newsFeedAndPostWrap .createpost_wrap .createpost_textarea_close {
+      width: 100%;
+      max-height: 50px;
+      border-radius: 5px; }
+    .newsFeedAndPostWrap .createpost_wrap .createpost_textarea_open {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 5px;
+      max-height: 100px;
+      height: 100px; }
+    .newsFeedAndPostWrap .createpost_wrap .createPostCategory_hide {
+      display: none; }
+    .newsFeedAndPostWrap .createpost_wrap .createPostCategory_show {
+      width: 100%;
+      margin-bottom: 10px; }
+    .newsFeedAndPostWrap .createpost_wrap .createPostButton_hide {
+      display: none; }
+    .newsFeedAndPostWrap .createpost_wrap .createPostButton_show {
+      display: inherit;
+      margin-bottom: 10px;
+      border: 1px solid #efefef;
+      float: right;
+      clear: both; }
+    .newsFeedAndPostWrap .createpost_wrap .uploadPicButton_hide {
+      display: none; }
+    .newsFeedAndPostWrap .createpost_wrap .uploadPicButton_show {
+      display: inherit;
+      float: left;
+      cursor: pointer; }
+      .newsFeedAndPostWrap .createpost_wrap .uploadPicButton_show img {
+        cursor: pointer; }
+    .newsFeedAndPostWrap .createpost_wrap .upLoadLinkIcon_hide {
+      display: none; }
+    .newsFeedAndPostWrap .createpost_wrap .picNotSelected img {
+      width: 30px; }
+    .newsFeedAndPostWrap .createpost_wrap .picSelected img {
+      width: 90px;
+      border-radius: 3px;
+      box-shadow: 2px 2px 2px gray; }
+    .newsFeedAndPostWrap .createpost_wrap .upLoadLinkIcon_show {
+      cursor: pointer;
+      margin-left: 10px;
+      line-height: 0px; }
+      .newsFeedAndPostWrap .createpost_wrap .upLoadLinkIcon_show img {
+        margin-top: 3px;
+        width: 21px; }
+  .newsFeedAndPostWrap .newsfeed_wrap {
+    float: left;
+    width: 575px;
+    margin-top: 3px; }
+    .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap {
+      z-index: 1;
+      border: 1px solid #efefef;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px; }
+      .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .their_avatar {
+        width: 50px;
+        border-radius: 5px; }
+      .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .poster_profilepic {
+        float: left; }
+      .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap {
+        width: 475px;
+        margin-left: 12%; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .postWrap_text .poster_posttext {
+          margin-bottom: 10px;
+          margin-top: 3px;
+          float: left; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .postWrap_text .poster_name {
+          float: left;
+          font-weight: bolder; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .post_image {
+          width: 100%;
+          margin-right: 10px; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .post_image img {
+          border-radius: 5px;
+          width: 100%;
+          box-shadow: 1px 1px 1px gray; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .newsfeedicon {
+          margin-top: 15px;
+          cursor: pointer;
+          float: left;
+          margin-right: 35px;
+          margin-bottom: 10px; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .likeThis img {
+          width: 17px; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .repostThis img {
+          width: 15px; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .moreOptions img {
+          width: 24px; }
+        .newsFeedAndPostWrap .newsfeed_wrap .newsfeed_item_wrap .post_content_wrap .commentOptions img {
+          width: 19px; }
+    .newsFeedAndPostWrap .newsfeed_wrap .postDateTime {
+      font-size: 11px; }
+
+.loginRegister_wrap {
+  width: 225px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #efefef;
+  padding: 15px; }
+  .loginRegister_wrap input {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%; }
+  .loginRegister_wrap button {
+    background-color: #286090;
+    border-radius: 5px;
+    border: 0px #286090;
+    height: 30px;
+    padding: 5px;
+    width: 90px;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px; }
+
+.registeration_form {
+  width: 225px;
+  margin: 0 auto; }
+  .registeration_form input {
+    margin-top: 5px;
+    width: 100%; }
+  .registeration_form button {
+    margin-top: 5px;
+    border: none; }
+
+.avatar_wrap img {
+  width: 250px; }
+
+.clear {
+  line-height: 0;
+  clear: both; }
+
+.hideElement {
+  display: none; }
+
+._click {
+  padding-bottom: 5px; }
+
+.favorite_button {
+  cursor: pointer; }
+
+.toggle_dropDown {
+  z-index: 9999;
+  margin-top: 55px;
+  right: 20px;
+  clear: both;
+  width: 150px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px; }
+  .toggle_dropDown ul {
+    list-style: none;
+    padding-left: 0px; }
+
+.hide {
+  display: none; }
+
+.newsfeed_dropdown {
+  z-index: 9999;
+  width: 150px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px; }
+  .newsfeed_dropdown ul {
+    list-style: none;
+    padding-left: 0px; }
+
+.dialogBoxWrap .dialogoverlay {
+  opacity: .1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.dialogBoxWrap .dialogbox {
+  position: fixed;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 400px;
+  z-index: 10;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -150px; }
+
+.dialogBoxWrapMessage .dialogoverlay {
+  opacity: .6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.dialogBoxWrapMessage .dialogbox {
+  position: fixed;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 7px;
+  width: 50%;
+  z-index: 10;
+  text-align: center;
+  top: 40%;
+  left: 40%;
+  margin-top: -125px;
+  margin-left: -150px; }
+  .dialogBoxWrapMessage .dialogbox .message_input_and_butt {
+    position: relative; }
+    .dialogBoxWrapMessage .dialogbox .message_input_and_butt button {
+      height: 32px;
+      position: absolute;
+      left: 70px; }
+    .dialogBoxWrapMessage .dialogbox .message_input_and_butt .messageTitle {
+      width: 250px;
+      border-radius: 5px;
+      margin-left: 25px;
+      height: 30px;
+      margin-bottom: 10px;
+      float: left; }
+    .dialogBoxWrapMessage .dialogbox .message_input_and_butt textarea {
+      padding: 5px;
+      min-height: 175px;
+      max-height: 175px;
+      border-radius: 5px;
+      max-width: 80%;
+      min-width: 80%;
+      margin-left: 80px;
+      margin-right: 0px;
+      border: 1px solid gray; }
+      .dialogBoxWrapMessage .dialogbox .message_input_and_butt textarea:focus {
+        outline: none; }
+  .dialogBoxWrapMessage .dialogbox .dialogAvatar {
+    width: 45px;
+    height: 45px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px; }
+    .dialogBoxWrapMessage .dialogbox .dialogAvatar img {
+      width: 45px;
+      border-radius: 5px; }
+  .dialogBoxWrapMessage .dialogbox .dialogboxbody_hide {
+    display: none; }
+  .dialogBoxWrapMessage .dialogbox .closeDialog {
+    float: left;
+    margin-right: 11px;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+    float: right; }
+
+.inboxWrap .inboxNavWrap {
+  width: 550px; }
+  .inboxWrap .inboxNavWrap div {
+    float: left;
+    margin-right: 80px;
+    color: blue;
+    cursor: pointer; }
+  .inboxWrap .inboxNavWrap .inboxOptions_inactive {
+    cursor: default;
+    opacity: .4; }
+  .inboxWrap .inboxNavWrap .inboxOptions {
+    cursor: pointer;
+    opacity: inherit;
+    font-weight: bold; }
+
+.inboxWrap .inboxBody {
+  width: 75%;
+  margin-top: 10px; }
+  .inboxWrap .inboxBody .messagePanel_wrap {
+    position: relative;
+    margin-bottom: 5px;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer; }
+    .inboxWrap .inboxBody .messagePanel_wrap :hover {
+      background-color: purple; }
+    .inboxWrap .inboxBody .messagePanel_wrap .messagePanel_avatar {
+      float: left; }
+      .inboxWrap .inboxBody .messagePanel_wrap .messagePanel_avatar img {
+        width: 45px;
+        border-radius: 5px; }
+    .inboxWrap .inboxBody .messagePanel_wrap .messageDetail_wrap {
+      float: left;
+      position: relative;
+      left: 15px; }
+    .inboxWrap .inboxBody .messagePanel_wrap .checkBox {
+      float: right; }
