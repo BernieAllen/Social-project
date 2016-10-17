@@ -12,8 +12,7 @@ var babelify = require('babelify');
 var es2015 = require('babel-preset-es2015');
 var babelReact = require('babel-preset-react');
 var react = require('react');
-var reactDOM = require('react-dom');
-var reactRouter = require('react-router');
+
 
 	livereload({ start: true }); // start 'livereload'
 	// With livereload you must:

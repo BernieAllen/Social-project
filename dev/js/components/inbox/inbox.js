@@ -20,9 +20,9 @@ var Inbox = React.createClass({
 
 	inboxPanel: function() {
      console.log(this.state.sentMessages);
-	   var myMessage = <MessagePanel 
-            messageDeets = {this.state.myMessages}
-            sentMessageDeets = {this.state.sentMessages}  
+	    var myMessage = <MessagePanel 
+           messageDeets = {this.state.myMessages}
+           sentMessageDeets = {this.state.sentMessages}  
 	    />;
        return  myMessage;
 	},
